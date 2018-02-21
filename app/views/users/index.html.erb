@@ -1,0 +1,17 @@
+<h2> These are all of the users!
+
+</h2>
+
+<ol>
+  <% @users.each do |user| %>
+  <li><%= user.username %></li>
+
+  <%= link_to 'Go to user', user %>
+  <%= link_to 'Delete this user', user, {method: "delete"} %>
+  <%= link_to "Edit this user", edit_user_path(user) %>
+  <% end %>
+  <br>
+  <br>
+    <%=link_to 'Sign Up!', new_user_path%>
+
+</ol>
